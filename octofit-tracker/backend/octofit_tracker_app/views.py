@@ -1,8 +1,9 @@
+from django.shortcuts import render
 from rest_framework import viewsets
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
-from .serializers import UserSerializer, TeamSerializer, ActivitySerializer, LeaderboardSerializer, WorkoutSerializer
-from octofit_tracker_app.models import User, Team, Activity, Leaderboard, Workout
+from .models import User, Team, Activity, Leaderboard, Workout
+from octofit_tracker.serializers import UserSerializer, TeamSerializer, ActivitySerializer, LeaderboardSerializer, WorkoutSerializer
 
 @api_view(['GET'])
 def api_root(request, format=None):
